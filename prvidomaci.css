@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    font-size: 28px;
+    color: gray;
+}
+
+img{
+    width: 190px;
+    height: 100px;
+}
+
+tr:nth-child(even){
+    background-color: #E9ECEF;
+}
+
+th{
+    border-style: solid;
+}
+
+table{
+    width: 80%;
+    height: 95%;
+
+    margin-left: 10%;
+    margin-right: 10%; 
+    margin-top: 5%;
+}
