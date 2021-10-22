@@ -86,7 +86,8 @@ function changeState(index){
      let dangerStyle = "#F8D7DA"
 
      newButton.innerHTML = newstate;
-     if(newButton.classList.contains("btn-danger")){
+
+     if(movies[index].state == true){
          newButton.classList.replace("btn-danger","btn-success");
          tableRow.style.backgroundColor = succesStyle;
      } else{
@@ -156,11 +157,20 @@ function displayTable(exist = null){
     if(exist != null) movies.push(exist);
      
     let innerTable = "";
-
+    let buttonStyle = "";
+    let rowColor = "";
+    
     movies.forEach((movie,index) => {
+        if(movie.state){
+          buttonStyle = "success"
+          rowColor = "#D1E7DD"
+        }else{
+          buttonStyle = "danger"
+          rowColor = "#F8D7DA"
+        }
 
-        innerTable += `<tr id="tr${index}" style="background-color:#F8D7DA;">
-        <td><button class="btn btn-danger mb-3" id="btn${index}" onclick="changeState(${index})">${movie.state}</button>
+        innerTable += `<tr id="tr${index}" style="background-color:${rowColor};">
+        <td><button class="btn btn-${buttonStyle} mb-3" id="btn${index}" onclick="changeState(${index})">${movie.state}</button>
         <br>
         <span class="fa fa-star star0" data-id="0" onclick="ratinStars(this)"></span>
         <span class="fa fa-star star1" data-id="1" onclick="ratinStars(this)"></span>
