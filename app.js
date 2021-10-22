@@ -148,10 +148,12 @@ function ratinStars(element){
     let n = element.getAttribute("data-id");
     let grabElement = element.parentElement.parentElement.getAttribute("data-id");
     movies[grabElement].rating = n;
-    
-    for(let i=0;i<=n;i++){
-      element.parentElement.querySelector(".star"+ i).classList.add("checked");
+
+    if(n!=0){
+    for(let i=1;i<=n;i++){
+      element.parentElement.querySelector(".star"+i).classList.add("checked");
     }
+  }
 
 }
 
@@ -174,15 +176,15 @@ function displayTable(exist = null){
         innerTable += `<tr id="tr${index}" data-id="${index}" style="background-color:${rowColor};">
         <td><button class="btn btn-${buttonStyle} mb-3" id="btn${index}" onclick="changeState(${index})">${movie.state}</button>
         <br>`
-        for(let i = 0; i <= 4; i++)
+        for(let i = 1; i <= 5; i++)
     {
-        innerTable += `<span class="fa fa-star star${i} `+ (i <= movie.rating ? "checked" : "") +`" style="`+ (i==0?"margin-left: 0px;":"") +`" data-id="${i}" onclick="ratinStars(this)"></span>`
+        innerTable += `<span class="fa fa-star star${i} `+ (i <= movie.rating ? "checked" : "") +`" style="`+ (i==1?"margin-left: 0px;":"") +`" data-id="${i}" onclick="ratinStars(this)"></span>`
     }
         /*<span class="fa fa-star star0" data-id="0" onclick="ratinStars(this)"></span>
         <span class="fa fa-star star1" data-id="1" onclick="ratinStars(this)"></span>
         <span class="fa fa-star star2" data-id="2" onclick="ratinStars(this)"></span>
         <span class="fa fa-star star3" data-id="3" onclick="ratinStars(this)"></span>
-        <span class="fa fa-star star4" data-id="4" onclick="ratinStars(this)"></span>*/
+        <span class="fa fa-star star4" data-id="4" onclick="ratinStars(this)"></span>*/ 
         innerTable += `</td>
         <td>${movie.name}</td>
         <td>${movie.release}</td>
