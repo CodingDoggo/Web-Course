@@ -122,7 +122,7 @@ function movieAdd(){
         <li><input type="number" placeholder="Release date" class="mb-2 form-control" id="movie_release" min="1930" max="2021"></li>
         <li><input type="text" placeholder="Country of origin" class="mb-2 form-control" id="movie_origin"></li>
         <li><input type="text" placeholder="Actors-Use comma in between" class="mb-2 form-control" id="movie_actors" required></li>
-        <li><input type="text" placeholder="Link of the movie image" class="mb-2 form-control" id="movie_link"></li>
+        <li><input type="text" placeholder="Link of the movie image-Poster for HQ" class="mb-2 form-control" id="movie_link"></li>
         <a href="" class="a_modal" style="color: black;" id="image_link">Can't find the given movie details? Click here!</a>
         <ul>
         </div>
