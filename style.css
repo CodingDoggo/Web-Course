@@ -47,7 +47,7 @@ img{
     position: relative;
     display: inline-block;
     font-size: 3rem;
-    background: linear-gradient(to bottom, #000, #000 60%, #fff 60%, #fff 100%);
+    background: linear-gradient(to bottom, #000, #000 60%, rgb(223, 71, 89) 60%, rgb(223, 71, 89) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
