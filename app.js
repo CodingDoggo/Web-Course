@@ -29,7 +29,7 @@ var movies = [
         rating:0
     },
     {
-        name:"Django the unchained",
+        name:"Django unchained",
         release:2012,
         origin:"USA",
         actors:[
