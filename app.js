@@ -24,7 +24,7 @@ var movies = [
            " Rebecca Ferguson",
            "  Jason Momoa"
         ],
-        image:"https://static1.srcdn.com/wordpress/wp-content/uploads/2021/08/dune-movie-poster-.jpg",
+        image:"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2a5bb2105168471.5f733bb4cec20.jpg",
         state: false,
         rating:0
     },
